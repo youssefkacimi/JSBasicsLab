@@ -1,4 +1,4 @@
-# JSBasicsLab
+# JS Basics Lab [![Build Status](https://travis-ci.org/ULH-WebDevelopment/JSBasicsLab.svg?branch=master)](https://travis-ci.org/ULH-WebDevelopment/JSBasicsLab)
 
 This project is a lab sessions of the Master 2 IDOD course at the [University of Le Havre](https://www.univ-lehavre.fr).
 
