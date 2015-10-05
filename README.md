@@ -1,16 +1,12 @@
-# Template Project for Labs
+# JSBasicsLab
 
-This project is a template for the lab sessions of the Master 2 IDOD course at the [University of Le Havre](https://www.univ-lehavre.fr).
-
-The purpose of this template is to ease the completion and testing of labs.
-
+This project is a lab sessions of the Master 2 IDOD course at the [University of Le Havre](https://www.univ-lehavre.fr).
 
 
 ## Assignment
 
 
-This section is a placeholder to describe the assignment for this lab.  It should define what is expected of you.
-
+A series of unit tests have been written in the `test/test.js` file in order to test the features of a module created in `app/scripts/modules/js-basics.js`. At first the tests are failing. You have to complete the missing code in  `app/scripts/modules/js-basics.js` so that all the tests pass. You do not have to modify the tests.
 
 Knowing the assignment, follow the steps below in order to complete the lab.
 
