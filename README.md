@@ -21,10 +21,10 @@ This project uses the [Grunt](http://gruntjs.com/) task runner to run the projec
 
 1.  First install <a href="https://nodejs.org/en/download/">NodeJS</a>. You should have `node` or `nodejs` as well as `npm` in your path.  
 2.  Then install Grunt and Bower:</p>
-    ```sh
-    npm install -g grunt-cli
-    npm install -g bower
-    ```
+```sh
+npm install -g grunt-cli
+npm install -g bower
+```
 
 ### Fork the project on github
 
