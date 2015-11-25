@@ -16,11 +16,12 @@
     JS_BASICS.getFileExtension = function(str) {
         // str will be a string, but it may not have a file extension.
         // Return the file extension (with no period) if it has one, otherwise false
-        if(!isNaN(str) && str.length !== 0){
-            return str.substr(str.indexOf("."));
-        } else{
-            return false;
+        var chaines = str.split(".");
+        if(chaines.length>1) {
+          return chaines[(chaines.length-1)];
         }
+        else
+          return false;
     };
 
     JS_BASICS.longestString = function(arr) {
