@@ -27,17 +27,21 @@
     JS_BASICS.longestString = function(arr) {
         // arr will be an array.
         // Return the longest string in the array
-        if(arr instanceof Array){
-            return true;
-        } else{
-            return false;
-        }
+        var longest="x";
+        for(var y=0;y<arr.length;y++){
+          if(typeof arr[y] === "string"){
+            if(longest.length<arr[y].length){
+              longest=arr[y];
+            }
+          }
+      }
+      return longest;
     };
 
     JS_BASICS.reverseString = function(str) {
         // str will be an string
         // Return a new string who's characters are in the opposite order to str's.
-        if(str instanceof String){
+        if(typeof str === "string"){
             return  str.split("").reverse().join("");
         }
     };
@@ -46,29 +50,28 @@
         // str will be an string
         // Return true if it is a palindrome and false otherwise. It should be case insensitive and not consider space
         // or punctuation.
-        if(str instanceof String ){
-            var len = str.length;
-            for ( var i = 0; i < Math.floor(len/2); i++ ) {
-                if (str[i] !== str[len - 1 - i]) {
-                    return false;
-                }
-            }
-            return true;
-        }
+      str=str.toLowerCase();
+      if(str.split("").reverse().join("") == str){
+        return true;
+      }
+      else
+        return  false;
     };
 
     JS_BASICS.nestedSum = function(arr) {
-        // arr will be an array, containing integers, strings and/or arrays like itself
-        // Return the sum all the numbers you find, anywhere in the nest of arrays.
-        var somme=0;
-        if(arr instanceof Array){
-                for(var i=0 ; i<arr.length; i++){
-                    if(parseInt(arr[i]) && !isNaN(arr[i])){
-                        somme = somme+arr[i];
-                    }
-                }
-
+      // arr will be an array, containing integers, strings and/or arrays like itself
+      // Return the sum all the numbers you find, anywhere in the nest of arrays.
+      var somme = 0;
+      if (Array.isArray(arr)){
+        for (var i = 0; i < arr.length; i++) {
+          if (Array.isArray(arr[i])) {
+            somme += JS_BASICS.nestedSum(arr[i]);
+          }
+          else if (typeof arr[i] === "number") {
+            somme += arr[i];
+          }
         }
+    }
         return somme;
     };
 
