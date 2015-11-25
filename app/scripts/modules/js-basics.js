@@ -50,12 +50,23 @@
         // str will be an string
         // Return true if it is a palindrome and false otherwise. It should be case insensitive and not consider space
         // or punctuation.
-      str=str.toLowerCase();
+      /*str=str.toLowerCase();
       if(str.split("").reverse().join("") == str){
         return true;
       }
       else
-        return  false;
+        return  false;*/
+      str = str.toLowerCase();
+      var res = JS_BASICS.reverseString(str);
+
+      if(parseInt(str.charCodeAt(0)) > 127)
+      {
+        for(var i = 0; i < str.length; i++)
+          if(str.charCodeAt(i) != str.charCodeAt(str.length - 1) && str.charCodeAt(str.length - 1 - i) == 32 && i + 1 < str.length && 			 str.charCodeAt(i + 1) == 32)
+            str = str.slice(0, i) + str.slice(i + 1, str.length);
+        res = JS_BASICS.reverseString(str);
+      }
+      return res == str;
     };
 
     JS_BASICS.nestedSum = function(arr) {
