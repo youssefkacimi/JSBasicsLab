@@ -6,7 +6,7 @@
     JS_BASICS.isNumberEven = function(i) {
       // i will be an integer.
       // Return true if it's even, and false if it isn't.
-        if(!isNaN(parseFloat(i) && parseInt(i)) && (i>-1) && i!=33){
+        if(!isNaN(parseInt(i)) && i%2===0){
             return true;
         } else {
             return false;
